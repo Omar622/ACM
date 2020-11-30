@@ -19,7 +19,7 @@ string dp(int i){
 
     string& ret = mem[i];
 
-    if(ret != "")
+    if(ret != "-")
         return ret;
 
     string ch = dp(i+1);
@@ -38,7 +38,7 @@ int main(){
         cin>>n;
         for (int i = 0; i < n; i++){
             cin>>arr[i];
-            mem[i] = "";
+            mem[i] = "-";
         }
         cout<<dp(0)<<"\n";
     }
